@@ -1,0 +1,50 @@
+[debug] [2025-12-20T12:45:32.837Z] ----------------------------------------------------------------------
+[debug] [2025-12-20T12:45:32.838Z] Command:       /Users/hashim/.nvm/versions/node/v18.17.0/bin/node /usr/local/bin/firebase init hosting
+[debug] [2025-12-20T12:45:32.838Z] CLI Version:   11.2.1
+[debug] [2025-12-20T12:45:32.838Z] Platform:      darwin
+[debug] [2025-12-20T12:45:32.838Z] Node Version:  v18.17.0
+[debug] [2025-12-20T12:45:32.839Z] Time:          Sat Dec 20 2025 17:45:32 GMT+0500 (GMT+05:00)
+[debug] [2025-12-20T12:45:32.839Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-20T12:45:32.871Z] Field ".emulators.firestore.port" in "firebase.json" is possibly invalid: should be number
+[debug] [2025-12-20T12:45:32.873Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-20T12:45:32.873Z] > authorizing via signed-in user (hashim.mirza017@gmail.com)
+[debug] [2025-12-20T12:45:32.873Z] Field ".emulators.firestore.port" in "firebase.json" is possibly invalid: should be number
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/hashim/Downloads/ecommerce-react-master
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-12-20T12:45:32.878Z] Using project from CLI flag: salinaka-ecommerce
+[debug] [2025-12-20T12:45:32.879Z] > refreshing access token with scopes: []
+[debug] [2025-12-20T12:45:32.879Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-20T12:45:32.879Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-20T12:45:33.316Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2025-12-20T12:45:33.317Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-20T12:45:33.318Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/salinaka-ecommerce [none]
+[debug] [2025-12-20T12:45:33.761Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/salinaka-ecommerce 401
+[debug] [2025-12-20T12:45:33.762Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/salinaka-ecommerce {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2025-12-20T12:45:33.762Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2025-12-20T12:45:34.148Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:287:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project salinaka-ecommerce. Please make sure the project exists and your account has permission to access it.
