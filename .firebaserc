@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "salinaka-ecommerce"
-  }
+    "default": "clothe-craft",
+    "dev": "clothe-craft"
+  },
+  "targets": {}
 }
