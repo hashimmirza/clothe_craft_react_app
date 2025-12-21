@@ -1,11 +1,13 @@
 .navigation {
+
+
+
   width: 100%;
   height: 10rem;
-  background: $background-color;
+  background: black;
   display: flex;
   align-items: center;
   padding: .5rem 5rem;
-  padding-top: 3rem;
   position: absolute;
   top: 0;
   transform: translateY(0);
@@ -20,22 +22,6 @@
   @include mobile {
     padding: 0 $s-size;
     position: fixed;
-  }
-
-  .logo {
-    height: inherit;
-    margin-right: 2rem;
-  }
-
-  .logo img {
-    width: 15rem;
-    height: inherit;
-    object-fit: contain;
-  }
-
-  .logo a {
-    display: block;
-    height: 100%;
   }
 
   .searchbar {
@@ -54,29 +40,28 @@
 
 .navigation-menu {
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  padding: 0;
-  margin: 0;
-  text-align: right;
+  align-items: center;
+  display: flex;
 }
 
 .navigation-menu-main {
-  padding-left: 0;
-  margin-right: 2rem;
-  flex-grow: 1;
-
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   li {
-    display: inline-block;
-    
-    
+      display: inline-block;
     a {
+      color: white;
       padding: 10px 15px;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       opacity: .5;
-      
+
       &:hover {
-        background: $background-color-01;
+        color: black;
+        border-radius: 100px;
+        background: white;
       }
     }
   }
@@ -85,14 +70,13 @@
 .navigation-menu-item {
   display: inline-block;
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+
 }
 
 .navigation-action {
   display: flex;
   align-items: center;
-  margin-left: $xxl-size;
+
 }
 
 .navigation-menu-link {
@@ -114,3 +98,152 @@
   font-weight: bold;
   opacity: 1 !important;
 }
+.bag-icon-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+
+  justify-content: flex-end;
+  height: inherit;
+  margin-right: 2rem;
+}
+
+.logo img {
+  width: 8rem;
+  height: inherit;
+  object-fit: contain;
+}
+
+.logo a {
+  display: block;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+//
+
+//
+//
+//.navbar {
+//  display: flex;
+//  align-items: center;
+//  justify-content: space-between;
+//  padding: 24px 40px;
+//  background-color: #000; /* Matching the dark UI */
+//  color: #ffffff;
+//}
+//
+///* Logo Styling */
+//.logo {
+//  display: flex;
+//  align-items: center;
+//  gap: 10px;
+//  font-weight: 700;
+//  font-size: 1.1rem;
+//  letter-spacing: 0.5px;
+//}
+//
+//.logo-icon {
+//  width: 20px;
+//  height: 20px;
+//  background: #fff;
+//  transform: rotate(45deg);
+//  border-radius: 3px;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
+//
+//.logo-dot {
+//  width: 4px;
+//  height: 4px;
+//  background: #000;
+//  border-radius: 50%;
+//}
+//
+///* Central Pill Navigation */
+//.nav-pill-container {
+//  display: flex;
+//  background: rgb(30, 30, 30); /* Subtle dark fill */
+//
+//  padding: 4px;
+//  border-radius: 100px;
+//}
+//
+//.nav-item {
+//  background: transparent;
+//  border: none;
+//  color: #a1a1aa; /* Muted text */
+//  padding: 8px 24px;
+//  border-radius: 100px;
+//  cursor: pointer;
+//  font-size: 0.9rem;
+//  transition: all 0.2s ease;
+//}
+//
+//.nav-item.active {
+//  background: #fff;
+//  color: #000;
+//}
+//
+//.nav-item:hover:not(.active) {
+//  color: #fff;
+//}
+//
+///* Right Side Actions */
+//.nav-actions {
+//  display: flex;
+//  align-items: center;
+//  gap: 16px;
+//}
+//
+//.bag-icon-btn {
+//  background: rgba(255, 255, 255, 0.05);
+//  border: 1px solid rgba(255, 255, 255, 0.1);
+//  color: #fff;
+//  padding: 10px;
+//  border-radius: 10px;
+//  cursor: pointer;
+//  display: flex;
+//  align-items: center;
+//}
+//
+//.btn-login {
+//  background: transparent;
+//  border: none;
+//  color: #fff;
+//  font-weight: 500;
+//  cursor: pointer;
+//  padding: 8px 16px;
+//}
+//
+//.btn-signup {
+//  background: #fff;
+//  color: #000;
+//  border: none;
+//  padding: 10px 24px;
+//  border-radius: 100px;
+//  font-weight: 600;
+//  cursor: pointer;
+//  transition: opacity 0.2s;
+//}
+//
+//.btn-signup:hover {
+//  opacity: 0.9;
+//}

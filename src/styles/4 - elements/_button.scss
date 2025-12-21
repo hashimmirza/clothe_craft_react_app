@@ -4,6 +4,7 @@
   border: 1px solid $button-color;
   color: $white;
   font-weight: bold;
+  border-radius: 100px;
   position: relative;
   display: flex;
   align-items: center;
@@ -22,7 +23,7 @@
   opacity: .5;
 
   &:hover {
-    cursor: not-allowed;   
+    cursor: not-allowed;
     // background: none;
   }
 }
