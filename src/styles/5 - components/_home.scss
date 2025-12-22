@@ -12,86 +12,225 @@
 }
 
 
+/* Color & Variable Definitions */
+:root {
+    --bg-dark: #0a0a0a;
+    --white: #ffffff;
+    --text-gray: #a1a1a1;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
 
-/* Hero */
-.hero {
+.hero-container {
+    min-height: 100vh;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Header Content */
+.hero-content {
     text-align: center;
-    padding: 80px 20px 40px;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
 }
 
-.head-line {
-    display: inline-block;
-    border: 1px solid ;
-    padding: 10px;
-    padding-top: 15px;
-    border-radius: 50px;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #888;
 
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
 }
 
-h1 {
-    font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; font-weight: 500;
-    color: white;
+.hero-title span {
+    font-style: italic;
 }
-.subtitle { color: #888; max-width: 600px; margin: 0 auto 40px; line-height: 1.6; }
+
+.hero-subtitle {
+    color: var(--text-gray);
+    max-width: 500px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+}
 
 .cta-btn {
-    background: white; color: black; border: none;
-    padding: 15px 30px; border-radius: 50px;
-    font-weight: bold; display: flex; align-items: center; gap: 10px;
-    margin: 0 auto; cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    color: black;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
-.cta-btn .arrow { background: black; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; }
+.arrow-circle {
+    background: black;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+}
 
-/* Gallery Arches */
-.gallery {
+/* Gallery Section */
+.gallery-wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 20px;
-    padding: 50px 0;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.arch-card {
+    border-top-left-radius: 999px;
+    border-top-right-radius: 999px;
+    overflow: hidden;
+    transition: all 0.5s ease;
     position: relative;
 }
 
-.arch-item {
-    width: 200px;
+.arch-card.side {
+    width: 220px;
     height: 350px;
-    border-radius: 100px 100px 0 0; /* Creates the Arch shape */
+    opacity: 0.5;
+    filter: grayscale(1);
+}
+
+.arch-card.active {
+    width: 320px;
+    height: 480px;
+    opacity: 1;
+    filter: grayscale(0);
+    box-shadow: 0 0 40px rgba(255,255,255,0.1);
+}
+
+.arch-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Price Tag Overlay */
+.price-tag {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+
+    padding: 1.5rem;
+    border-radius: 100px;
+
+    text-align: center;
+}
+
+.mini-thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 8px;
     overflow: hidden;
+
+}
+
+.price-val {
+    color: white;
+
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.price-old {
+    color: #a81b1b;
+    text-decoration: line-through;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+/* Slider Arrows */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow-left { left: 5%; }
+.arrow-right { right: 5%; }
+
+
+
+
+
+/* ... keep previous styles from above ... */
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.gallery-strip {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arch-card {
+    border-top-left-radius: 999px;
+    border-top-right-radius: 999px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    /* This transition makes the expanding/shrinking look smooth */
+    transition: width 0.6s ease, height 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
+}
+
+.arch-card.side {
+    width: 180px;
+    height: 300px;
+    filter: grayscale(1) brightness(0.5);
     opacity: 0.6;
 }
 
-.arch-item img { width: 100%; height: 100%; object-fit: cover; }
-
-.arch-item.featured {
-    width: 280px;
-    height: 420px;
+.arch-card.active {
+    width: 320px;
+    height: 480px;
+    filter: grayscale(0) brightness(1);
     opacity: 1;
-    position: relative;
+    z-index: 5;
 }
 
-.price-tag {
-    position: absolute;
-    bottom: 20px; left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 15px; border-radius: 30px;
-    text-align: center; width: 140px;
-    border: 1px solid rgba(255,255,255,0.2);
+.price-label {
+    font-size: 10px;
+    color: white;
+    margin: 0;
+    letter-spacing: 1px;
 }
 
-.mini-thumb { width: 50px; height: 50px; border-radius: 50%; border: 2px solid white; margin: 0 auto 10px; background: #eee; }
-
-.nav-arrow {
-    position: absolute; top: 75%;
-    background: rgba(255,255,255,0.1);
-    border: none; color: white;
-    width: 40px; height: 40px; border-radius: 50%;
-    cursor: pointer; z-index: 10;
+/* Add a hover effect for side cards */
+.arch-card.side:hover {
+    opacity: 0.9;
+    filter: grayscale(0.5) brightness(0.8);
 }
-.nav-arrow.left { left: 18%; }
-.nav-arrow.right { right: 18%; }
