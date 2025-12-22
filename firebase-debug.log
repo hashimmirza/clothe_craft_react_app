@@ -1,0 +1,93 @@
+[debug] [2025-12-21T12:41:49.093Z] ----------------------------------------------------------------------
+[debug] [2025-12-21T12:41:49.102Z] Command:       /Users/hashim/.nvm/versions/node/v20.19.6/bin/node /Users/hashim/.nvm/versions/node/v20.19.6/bin/firebase deploy
+[debug] [2025-12-21T12:41:49.102Z] CLI Version:   15.1.0
+[debug] [2025-12-21T12:41:49.102Z] Platform:      darwin
+[debug] [2025-12-21T12:41:49.102Z] Node Version:  v20.19.6
+[debug] [2025-12-21T12:41:49.102Z] Time:          Sun Dec 21 2025 17:41:49 GMT+0500 (Pakistan Standard Time)
+[debug] [2025-12-21T12:41:49.102Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-21T12:41:50.047Z] Field "/emulators/firestore/port" in "firebase.json" is possibly invalid: must be number
+[debug] [2025-12-21T12:41:50.049Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-21T12:41:50.049Z] > authorizing via signed-in user (hashim.mirza017@gmail.com)
+[debug] [2025-12-21T12:41:50.049Z] [iam] checking project clothe-craft for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2025-12-21T12:41:50.050Z] Checked if tokens are valid: false, expires at: 1766241134528
+[debug] [2025-12-21T12:41:50.050Z] Checked if tokens are valid: false, expires at: 1766241134528
+[debug] [2025-12-21T12:41:50.050Z] > refreshing access token with scopes: []
+[debug] [2025-12-21T12:41:50.051Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-21T12:41:50.051Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-21T12:41:50.626Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-21T12:41:50.626Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-21T12:41:50.656Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/clothe-craft:testIamPermissions [none]
+[debug] [2025-12-21T12:41:50.656Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/clothe-craft:testIamPermissions x-goog-quota-user=projects/clothe-craft
+[debug] [2025-12-21T12:41:50.656Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clothe-craft:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2025-12-21T12:41:52.501Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/clothe-craft:testIamPermissions 200
+[debug] [2025-12-21T12:41:52.501Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clothe-craft:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2025-12-21T12:41:52.502Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:41:52.502Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:41:52.502Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft [none]
+[debug] [2025-12-21T12:41:53.417Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft 200
+[debug] [2025-12-21T12:41:53.418Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft {"projectId":"clothe-craft","projectNumber":"14716751496","displayName":"Clothe Craft","name":"projects/clothe-craft","resources":{"hostingSite":"clothe-craft","realtimeDatabaseInstance":"clothe-craft-default-rtdb"},"state":"ACTIVE","etag":"1_dd73afec-14f3-4b2b-86b0-54bbfa922b0e"}
+[debug] [2025-12-21T12:41:53.419Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:41:53.419Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:41:53.419Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft [none]
+[debug] [2025-12-21T12:41:53.820Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft 200
+[debug] [2025-12-21T12:41:53.820Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft {"projectId":"clothe-craft","projectNumber":"14716751496","displayName":"Clothe Craft","name":"projects/clothe-craft","resources":{"hostingSite":"clothe-craft","realtimeDatabaseInstance":"clothe-craft-default-rtdb"},"state":"ACTIVE","etag":"1_dd73afec-14f3-4b2b-86b0-54bbfa922b0e"}
+[info] 
+[info] === Deploying to 'clothe-craft'...
+[info] 
+[info] i  deploying database, firestore, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2025-12-21T12:41:53.826Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:41:53.826Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:41:53.826Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/clothe-craft/locations/-/instances/clothe-craft-default-rtdb [none]
+[debug] [2025-12-21T12:41:58.925Z] *** [apiv2] error from fetch(https://firebasedatabase.googleapis.com/v1beta/projects/clothe-craft/locations/-/instances/clothe-craft-default-rtdb, {"headers":{},"method":"GET","signal":{"reason":""}}): FetchError: request to https://firebasedatabase.googleapis.com/v1beta/projects/clothe-craft/locations/-/instances/clothe-craft-default-rtdb failed, reason: getaddrinfo ENOTFOUND firebasedatabase.googleapis.com
+[debug] [2025-12-21T12:41:58.925Z] Failed to make request to https://firebasedatabase.googleapis.com/v1beta/projects/clothe-craft/locations/-/instances/clothe-craft-default-rtdb
+[debug] [2025-12-21T12:41:59.430Z] FirebaseError: Failed to make request to https://firebasedatabase.googleapis.com/v1beta/projects/clothe-craft/locations/-/instances/clothe-craft-default-rtdb
+    at RetryOperation._fn (/Users/hashim/.nvm/versions/node/v20.19.6/lib/node_modules/firebase-tools/lib/apiv2.js:271:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get instance details for instance: clothe-craft-default-rtdb. See firebase-debug.log for more details.
+[debug] [2025-12-21T12:42:20.745Z] ----------------------------------------------------------------------
+[debug] [2025-12-21T12:42:20.747Z] Command:       /Users/hashim/.nvm/versions/node/v20.19.6/bin/node /Users/hashim/.nvm/versions/node/v20.19.6/bin/firebase deploy
+[debug] [2025-12-21T12:42:20.747Z] CLI Version:   15.1.0
+[debug] [2025-12-21T12:42:20.747Z] Platform:      darwin
+[debug] [2025-12-21T12:42:20.747Z] Node Version:  v20.19.6
+[debug] [2025-12-21T12:42:20.747Z] Time:          Sun Dec 21 2025 17:42:20 GMT+0500 (Pakistan Standard Time)
+[debug] [2025-12-21T12:42:20.747Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-21T12:42:21.562Z] Field "/emulators/firestore/port" in "firebase.json" is possibly invalid: must be number
+[debug] [2025-12-21T12:42:21.565Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-21T12:42:21.565Z] > authorizing via signed-in user (hashim.mirza017@gmail.com)
+[debug] [2025-12-21T12:42:21.565Z] [iam] checking project clothe-craft for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2025-12-21T12:42:21.566Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:42:21.566Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:42:21.566Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/clothe-craft:testIamPermissions [none]
+[debug] [2025-12-21T12:42:21.566Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/clothe-craft:testIamPermissions x-goog-quota-user=projects/clothe-craft
+[debug] [2025-12-21T12:42:21.566Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clothe-craft:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2025-12-21T12:42:23.201Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/clothe-craft:testIamPermissions 200
+[debug] [2025-12-21T12:42:23.201Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clothe-craft:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2025-12-21T12:42:23.202Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:42:23.202Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:42:23.202Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft [none]
+[debug] [2025-12-21T12:42:23.934Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft 200
+[debug] [2025-12-21T12:42:23.934Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft {"projectId":"clothe-craft","projectNumber":"14716751496","displayName":"Clothe Craft","name":"projects/clothe-craft","resources":{"hostingSite":"clothe-craft","realtimeDatabaseInstance":"clothe-craft-default-rtdb"},"state":"ACTIVE","etag":"1_dd73afec-14f3-4b2b-86b0-54bbfa922b0e"}
+[debug] [2025-12-21T12:42:23.934Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:42:23.934Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:42:23.934Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft [none]
+[debug] [2025-12-21T12:42:24.376Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft 200
+[debug] [2025-12-21T12:42:24.376Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clothe-craft {"projectId":"clothe-craft","projectNumber":"14716751496","displayName":"Clothe Craft","name":"projects/clothe-craft","resources":{"hostingSite":"clothe-craft","realtimeDatabaseInstance":"clothe-craft-default-rtdb"},"state":"ACTIVE","etag":"1_dd73afec-14f3-4b2b-86b0-54bbfa922b0e"}
+[info] 
+[info] === Deploying to 'clothe-craft'...
+[info] 
+[info] i  deploying database, firestore, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2025-12-21T12:42:24.379Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:42:24.379Z] Checked if tokens are valid: true, expires at: 1766324509626
+[debug] [2025-12-21T12:42:24.379Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/clothe-craft/locations/-/instances/clothe-craft-default-rtdb [none]
+[debug] [2025-12-21T12:42:24.383Z] *** [apiv2] error from fetch(https://firebasedatabase.googleapis.com/v1beta/projects/clothe-craft/locations/-/instances/clothe-craft-default-rtdb, {"headers":{},"method":"GET","signal":{"reason":""}}): FetchError: request to https://firebasedatabase.googleapis.com/v1beta/projects/clothe-craft/locations/-/instances/clothe-craft-default-rtdb failed, reason: getaddrinfo ENOTFOUND firebasedatabase.googleapis.com
+[debug] [2025-12-21T12:42:24.383Z] Failed to make request to https://firebasedatabase.googleapis.com/v1beta/projects/clothe-craft/locations/-/instances/clothe-craft-default-rtdb
+[debug] [2025-12-21T12:42:24.983Z] FirebaseError: Failed to make request to https://firebasedatabase.googleapis.com/v1beta/projects/clothe-craft/locations/-/instances/clothe-craft-default-rtdb
+    at RetryOperation._fn (/Users/hashim/.nvm/versions/node/v20.19.6/lib/node_modules/firebase-tools/lib/apiv2.js:271:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get instance details for instance: clothe-craft-default-rtdb. See firebase-debug.log for more details.

@@ -18,13 +18,14 @@ import SearchBar from './SearchBar';
 const Navigation = () => {
   const navbar = useRef(null);
   const { pathname } = useLocation();
-
+  const [scrolled, setScrolled] = useState(false);
   const store = useSelector((state) => ({
     basketLength: state.basket.length,
     user: state.auth,
     isAuthenticating: state.app.isAuthenticating,
     isLoading: state.app.loading
   }));
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
 
   const scrollHandler = () => {
     if (navbar.current && window.screen.width > 480) {
