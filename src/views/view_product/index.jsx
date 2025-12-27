@@ -73,23 +73,23 @@ const ViewProduct = () => {
             </h3>
           </Link>
           <div className="product-modal">
-            {product.imageCollection.length !== 0 && (
-              <div className="product-modal-image-collection">
-                {product.imageCollection.map((image) => (
-                  <div
-                    className="product-modal-image-collection-wrapper"
-                    key={image.id}
-                    onClick={() => setSelectedImage(image.url)}
-                    role="presentation"
-                  >
-                    <ImageLoader
-                      className="product-modal-image-collection-img"
-                      src={image.url}
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
+            {/*{product.imageCollection.length !== 0 && (*/}
+            {/*  <div className="product-modal-image-collection">*/}
+            {/*    {product.imageCollection.map((image) => (*/}
+            {/*      <div*/}
+            {/*        className="product-modal-image-collection-wrapper"*/}
+            {/*        key={image.id}*/}
+            {/*        onClick={() => setSelectedImage(image.url)}*/}
+            {/*        role="presentation"*/}
+            {/*      >*/}
+            {/*        <ImageLoader*/}
+            {/*          className="product-modal-image-collection-img"*/}
+            {/*          src={image.url}*/}
+            {/*        />*/}
+            {/*      </div>*/}
+            {/*    ))}*/}
+            {/*  </div>*/}
+            {/*)}*/}
             <div className="product-modal-image-wrapper">
               {selectedColor && <input type="color" disabled ref={colorOverlay} id="color-overlay" />}
               <ImageLoader
