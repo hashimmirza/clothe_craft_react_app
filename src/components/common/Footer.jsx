@@ -1,5 +1,5 @@
 import * as Route from '@/constants/routes';
-import logo from '@/images/logo-full.png';
+import logo from '@/images/logo-full-white.png';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -15,27 +15,22 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-col-1">
         <strong>
-          <span>
+          <span className="footer-text">
             Developed by
             {' '}
-            <a href="https://github.com/jgudo">JULIUS GUEVARRA</a>
+            <a className="footer-text" href="https://www.linkedin.com/in/muhammad-hashim-058677182/">Hashim Mirza</a>
           </span>
         </strong>
       </div>
       <div className="footer-col-2">
         <img alt="Footer logo" className="footer-logo" src={logo} />
-        <h5>
+        <h5 className="footer-text">
           &copy;&nbsp;
           {new Date().getFullYear()}
         </h5>
       </div>
       <div className="footer-col-3">
-        <strong>
-          <span>
-            Fork this project &nbsp;
-            <a href="https://github.com/jgudo/ecommerce-react">HERE</a>
-          </span>
-        </strong>
+
       </div>
     </footer>
   );
